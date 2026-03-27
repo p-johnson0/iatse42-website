@@ -60,7 +60,6 @@
     </button>
   </nav>
 
-  <!-- Mobile menu -->
   <div class="mobile-menu" id="mobileMenu">
     <a href="#about" onclick="closeMobile()">About</a>
     <a href="#what-we-do" onclick="closeMobile()">What We Do</a>
@@ -71,18 +70,23 @@
 
   <!-- ── HERO ── -->
   <section class="hero">
+
+    <!-- Left: content spread top to bottom -->
     <div class="hero-content">
-      <div class="hero-kicker">
-        <div class="hero-kicker-line"></div>
-        <span>International Alliance of Theatrical Stage Employees</span>
+      <div class="hero-top">
+        <div class="hero-kicker">
+          <div class="hero-kicker-line"></div>
+          <span>International Alliance of Theatrical Stage Employees</span>
+        </div>
+        <span class="hero-h1">Omaha's Union for<br>Live Entertainment.</span>
+        <span class="hero-h1-sub">The people behind every performance.</span>
+        <p class="hero-body">IATSE Local 42 represents the stagehands, riggers, electricians, carpenters, and technicians who build and operate live entertainment across Omaha — from arena tours to Broadway. If there's a show, our members made it happen.</p>
+        <div class="hero-actions">
+          <a class="btn-primary" href="#join">How to Join</a>
+          <a class="btn-text" href="#what-we-do">What We Do <em>→</em></a>
+        </div>
       </div>
-      <span class="hero-h1">Omaha's Union for<br>Live Entertainment.</span>
-      <span class="hero-h1-sub">The people behind every performance.</span>
-      <p class="hero-body">IATSE Local 42 represents the stagehands, riggers, electricians, carpenters, and technicians who build and operate live entertainment across Omaha — from arena tours to Broadway. If there's a show, our members made it happen.</p>
-      <div class="hero-actions">
-        <a class="btn-primary" href="#join">How to Join</a>
-        <a class="btn-text" href="#what-we-do">What We Do <em>→</em></a>
-      </div>
+      <!-- Stats pinned to bottom -->
       <div class="hero-meta">
         <div class="hero-fact"><div class="hero-fact-n">1896</div><div class="hero-fact-l">Founded in Omaha</div></div>
         <div class="hero-fact"><div class="hero-fact-n">150+</div><div class="hero-fact-l">Active members</div></div>
@@ -90,9 +94,12 @@
         <div class="hero-fact"><div class="hero-fact-n">125+</div><div class="hero-fact-l">Years serving Omaha</div></div>
       </div>
     </div>
+
+    <!-- Right: logo fills full column -->
     <div class="hero-badge-wrap">
       <img src="/public/logo.png" alt="IATSE Local 42" class="hero-logo-img"/>
     </div>
+
   </section>
 
   <!-- ── DEPT STRIP ── -->
