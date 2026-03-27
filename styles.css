@@ -126,7 +126,7 @@ body {
   background: var(--near);
   border-bottom: 2px solid var(--gold);
   display: grid;
-  grid-template-columns: 1fr 220px;
+  grid-template-columns: 1fr 320px;
   gap: 56px;
   align-items: center;
 }
@@ -216,9 +216,14 @@ body {
   line-height: 1;
 }
 .hero-fact-l { font-size: 11px; color: #666; letter-spacing: 0.5px; margin-top: 5px; }
-.hero-badge-wrap { display: flex; align-items: center; justify-content: center; }
-.hero-logo-img { width: 210px; height: 210px; border-radius: 50%; object-fit: cover; }
-.hero-logo-svg { width: 210px; height: 210px; }
+.hero-badge-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+}
+.hero-logo-img { width: 300px; height: 300px; border-radius: 50%; object-fit: cover; }
+.hero-logo-svg { width: 300px; height: 300px; }
 
 /* ── DEPT STRIP ── */
 .dept-strip {
