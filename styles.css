@@ -33,14 +33,9 @@ body {
   top: 0;
   z-index: 100;
 }
-.nav-brand {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  text-decoration: none;
-}
+.nav-brand { display: flex; align-items: center; gap: 14px; text-decoration: none; }
 .nav-logo-wrap { width: 42px; height: 42px; flex-shrink: 0; }
-.nav-logo-img { width: 42px; height: 42px; border-radius: 50%; object-fit: cover; }
+.nav-logo-img { width: 42px; height: 42px; object-fit: contain; }
 .nav-logo-svg { width: 42px; height: 42px; }
 .nav-title {
   font-family: 'Playfair Display', Georgia, serif;
@@ -88,12 +83,7 @@ body {
   cursor: pointer;
   padding: 4px;
 }
-.nav-hamburger span {
-  display: block;
-  width: 22px;
-  height: 1.5px;
-  background: #aaa;
-}
+.nav-hamburger span { display: block; width: 22px; height: 1.5px; background: #aaa; }
 
 /* Mobile menu */
 .mobile-menu {
@@ -134,12 +124,7 @@ body {
   flex-direction: column;
   justify-content: center;
 }
-.hero-kicker {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  margin-bottom: 32px;
-}
+.hero-kicker { display: flex; align-items: center; gap: 14px; margin-bottom: 32px; }
 .hero-kicker-line { width: 28px; height: 1px; background: var(--gold); flex-shrink: 0; }
 .hero-kicker span {
   font-size: 10px;
@@ -220,27 +205,20 @@ body {
 }
 .hero-fact-l { font-size: 11px; color: #666; letter-spacing: 0.5px; margin-top: 5px; }
 
-/* Hero badge — fills the right column entirely */
+/* Hero badge — no border, no border-radius, transparent PNG floats naturally */
 .hero-badge-wrap {
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 40px;
-  border-left: 1px solid var(--rule);
 }
 .hero-logo-img {
   width: 100%;
   max-width: 460px;
   height: auto;
-  aspect-ratio: 1;
-  border-radius: 50%;
-  object-fit: cover;
+  object-fit: contain;
 }
-.hero-logo-svg {
-  width: 100%;
-  max-width: 460px;
-  height: auto;
-}
+.hero-logo-svg { width: 100%; max-width: 460px; height: auto; }
 
 /* ── DEPT STRIP ── */
 .dept-strip {
@@ -248,10 +226,7 @@ body {
   grid-template-columns: repeat(4, 1fr);
   background: var(--gold);
 }
-.dept-cell {
-  padding: 20px 26px;
-  border-right: 1px solid rgba(0,0,0,0.15);
-}
+.dept-cell { padding: 20px 26px; border-right: 1px solid rgba(0,0,0,0.15); }
 .dept-cell:last-child { border-right: none; }
 .dept-name { font-size: 13px; font-weight: 600; color: var(--black); }
 .dept-sub { font-size: 11px; color: rgba(0,0,0,0.5); margin-top: 3px; }
@@ -262,16 +237,8 @@ body {
   grid-template-columns: 3fr 2fr;
   border-bottom: 1px solid var(--rule);
 }
-.about-left {
-  padding: 64px 48px;
-  border-right: 1px solid var(--rule);
-}
-.section-eyebrow {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-bottom: 20px;
-}
+.about-left { padding: 64px 48px; border-right: 1px solid var(--rule); }
+.section-eyebrow { display: flex; align-items: center; gap: 12px; margin-bottom: 20px; }
 .section-eyebrow::before {
   content: '';
   display: block;
@@ -295,20 +262,10 @@ body {
   line-height: 1.25;
   margin-bottom: 22px;
 }
-.about-left p {
-  font-size: 14px;
-  color: #888;
-  line-height: 1.85;
-  margin-bottom: 16px;
-}
+.about-left p { font-size: 14px; color: #888; line-height: 1.85; margin-bottom: 16px; }
 .about-left p:last-child { margin-bottom: 0; }
 .about-left p strong { color: #ccc; font-weight: 600; }
-.about-right {
-  padding: 64px 36px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
+.about-right { padding: 64px 36px; display: flex; flex-direction: column; justify-content: center; }
 .stat-item {
   padding: 22px 0;
   border-bottom: 1px solid var(--rule);
@@ -326,11 +283,7 @@ body {
 }
 
 /* ── HOW IT WORKS ── */
-.how {
-  padding: 72px 48px;
-  background: var(--mid);
-  border-bottom: 1px solid var(--rule);
-}
+.how { padding: 72px 48px; background: var(--mid); border-bottom: 1px solid var(--rule); }
 .how-head { margin-bottom: 40px; }
 .how-head h2 {
   font-family: 'Playfair Display', Georgia, serif;
@@ -339,12 +292,7 @@ body {
   color: #fff;
   margin-top: 14px;
 }
-.steps {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1px;
-  background: var(--rule);
-}
+.steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--rule); }
 .step { background: var(--mid); padding: 36px 30px; }
 .step-num {
   font-family: 'Playfair Display', Georgia, serif;
@@ -358,11 +306,7 @@ body {
 .step p { font-size: 13px; color: #777; line-height: 1.75; }
 
 /* ── SHOWS ── */
-.shows {
-  padding: 72px 48px;
-  background: var(--near);
-  border-bottom: 1px solid var(--rule);
-}
+.shows { padding: 72px 48px; background: var(--near); border-bottom: 1px solid var(--rule); }
 .shows-head { margin-bottom: 30px; }
 .shows-head h2 {
   font-family: 'Playfair Display', Georgia, serif;
@@ -372,12 +316,7 @@ body {
   margin-top: 14px;
 }
 .shows-head p { font-size: 13px; color: #777; margin-top: 8px; }
-.show-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1px;
-  background: var(--rule);
-}
+.show-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; background: var(--rule); }
 .show-item {
   background: var(--near);
   padding: 22px 26px;
@@ -448,7 +387,7 @@ body {
 }
 .footer-brand { display: flex; flex-direction: column; gap: 14px; }
 .footer-brand-top { display: flex; align-items: center; gap: 12px; }
-.footer-logo-img { width: 44px; height: 44px; border-radius: 50%; object-fit: cover; flex-shrink: 0; }
+.footer-logo-img { width: 44px; height: 44px; object-fit: contain; flex-shrink: 0; }
 .footer-logo-svg { width: 44px; height: 44px; flex-shrink: 0; }
 .footer-brand-name {
   font-family: 'Playfair Display', Georgia, serif;
@@ -492,11 +431,7 @@ body {
 
   .hero { grid-template-columns: 1fr; min-height: unset; }
   .hero-content { padding: 52px 24px 40px; }
-  .hero-badge-wrap {
-    border-left: none;
-    border-top: 1px solid var(--rule);
-    padding: 40px 24px;
-  }
+  .hero-badge-wrap { border-top: 1px solid var(--rule); padding: 40px 24px; }
   .hero-logo-img { max-width: 280px; }
   .hero-h1 { font-size: 36px; }
   .hero-h1-sub { font-size: 20px; }
@@ -515,20 +450,8 @@ body {
   .shows { padding: 48px 24px; }
   .show-grid { grid-template-columns: 1fr; }
 
-  .join {
-    grid-template-columns: 1fr;
-    padding: 48px 24px;
-    gap: 28px;
-  }
+  .join { grid-template-columns: 1fr; padding: 48px 24px; gap: 28px; }
 
-  .footer {
-    grid-template-columns: 1fr;
-    padding: 40px 24px 24px;
-    gap: 32px;
-  }
-  .footer-bottom {
-    padding: 16px 24px;
-    flex-direction: column;
-    gap: 6px;
-  }
+  .footer { grid-template-columns: 1fr; padding: 40px 24px 24px; gap: 32px; }
+  .footer-bottom { padding: 16px 24px; flex-direction: column; gap: 6px; }
 }
