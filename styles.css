@@ -36,7 +36,6 @@ body {
 .nav-brand { display: flex; align-items: center; gap: 14px; text-decoration: none; }
 .nav-logo-wrap { width: 42px; height: 42px; flex-shrink: 0; }
 .nav-logo-img { width: 42px; height: 42px; object-fit: contain; }
-.nav-logo-svg { width: 42px; height: 42px; }
 .nav-title {
   font-family: 'Playfair Display', Georgia, serif;
   font-size: 15px;
@@ -56,7 +55,6 @@ body {
   color: #888;
   font-size: 13px;
   text-decoration: none;
-  letter-spacing: 0.3px;
   transition: color 0.15s;
 }
 .nav-links a:hover { color: var(--gold); }
@@ -110,22 +108,26 @@ body {
   font-size: 12px;
 }
 
-/* ── HERO ── */
+/* ── HERO ── 
+   3-row grid: [1fr content+logo] [auto dept strip]
+   Total height = 100vh - nav
+*/
 .hero {
   background: var(--near);
-  border-bottom: 2px solid var(--gold);
   display: grid;
   grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr auto;
   min-height: calc(100vh - 68px);
 }
 
-/* Left content — vertically centered */
+/* Left content — row 1, col 1 */
 .hero-content {
+  grid-column: 1;
+  grid-row: 1;
   padding: 64px 48px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 0;
 }
 .hero-kicker { display: flex; align-items: center; gap: 14px; margin-bottom: 32px; }
 .hero-kicker-line { width: 28px; height: 1px; background: var(--gold); flex-shrink: 0; }
@@ -162,7 +164,7 @@ body {
   margin-bottom: 36px;
   max-width: 520px;
 }
-.hero-actions { display: flex; align-items: center; gap: 22px; margin-bottom: 48px; }
+.hero-actions { display: flex; align-items: center; gap: 22px; }
 .btn-primary {
   background: var(--gold);
   color: var(--black);
@@ -193,23 +195,11 @@ body {
 }
 .btn-text:hover { color: var(--gold); }
 .btn-text em { color: var(--gold); font-style: normal; }
-.hero-meta {
-  padding-top: 36px;
-  border-top: 1px solid var(--rule);
-  display: flex;
-  gap: 40px;
-}
-.hero-fact-n {
-  font-family: 'Playfair Display', Georgia, serif;
-  font-size: 28px;
-  font-weight: 700;
-  color: var(--gold);
-  line-height: 1;
-}
-.hero-fact-l { font-size: 11px; color: #666; letter-spacing: 0.5px; margin-top: 6px; }
 
-/* Logo — fills full right column */
+/* Logo — row 1, col 2 */
 .hero-badge-wrap {
+  grid-column: 2;
+  grid-row: 1;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -220,13 +210,15 @@ body {
   height: 92%;
   object-fit: contain;
 }
-.hero-logo-svg { width: 100%; height: 100%; }
 
-/* ── DEPT STRIP ── */
+/* Dept strip — row 2, spans both columns */
 .dept-strip {
+  grid-column: 1 / -1;
+  grid-row: 2;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   background: var(--gold);
+  border-top: none;
 }
 .dept-cell { padding: 20px 26px; border-right: 1px solid rgba(0,0,0,0.15); }
 .dept-cell:last-child { border-right: none; }
@@ -390,7 +382,6 @@ body {
 .footer-brand { display: flex; flex-direction: column; gap: 14px; }
 .footer-brand-top { display: flex; align-items: center; gap: 12px; }
 .footer-logo-img { width: 44px; height: 44px; object-fit: contain; flex-shrink: 0; }
-.footer-logo-svg { width: 44px; height: 44px; flex-shrink: 0; }
 .footer-brand-name {
   font-family: 'Playfair Display', Georgia, serif;
   font-size: 16px;
@@ -431,16 +422,16 @@ body {
   .nav-links, .nav-cta { display: none; }
   .nav-hamburger { display: flex; }
 
-  .hero { grid-template-columns: 1fr; min-height: unset; }
-  .hero-content { padding: 48px 24px 40px; }
-  .hero-badge-wrap { padding: 32px 24px; border-top: 1px solid var(--rule); height: 280px; }
-  .hero-logo-img { width: auto; height: 100%; }
+  .hero {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    min-height: unset;
+  }
+  .hero-content { grid-column: 1; grid-row: 1; padding: 48px 24px 36px; }
+  .hero-badge-wrap { grid-column: 1; grid-row: 2; height: 280px; padding: 16px; border-top: 1px solid var(--rule); }
+  .dept-strip { grid-column: 1; grid-row: 3; grid-template-columns: repeat(2, 1fr); }
   .hero-h1 { font-size: 38px; }
   .hero-h1-sub { font-size: 22px; }
-  .hero-meta { gap: 24px; flex-wrap: wrap; }
-  .hero-fact-n { font-size: 24px; }
-
-  .dept-strip { grid-template-columns: repeat(2, 1fr); }
 
   .about { grid-template-columns: 1fr; }
   .about-left { padding: 40px 24px; border-right: none; border-bottom: 1px solid var(--rule); }
