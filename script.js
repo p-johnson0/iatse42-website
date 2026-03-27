@@ -1,8 +1,14 @@
-// Force scroll to top on every load — no scroll restoration
+// Prevent scroll restoration and clear any hash on load
 if (history.scrollRestoration) {
   history.scrollRestoration = 'manual';
 }
-window.scrollTo(0, 0);
+
+window.addEventListener('load', () => {
+  if (window.location.hash) {
+    history.replaceState(null, '', window.location.pathname);
+  }
+  window.scrollTo(0, 0);
+});
 
 // Mobile menu toggle
 const hamburger = document.getElementById('hamburger');
