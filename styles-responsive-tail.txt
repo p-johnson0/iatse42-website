@@ -1,0 +1,32 @@
+  .nav-links, .nav-cta { display: none; }
+  .nav-hamburger { display: flex; }
+
+  .hero {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    min-height: unset;
+  }
+  .hero-content { grid-column: 1; grid-row: 1; padding: 48px 24px 36px; }
+  .hero-badge-wrap { grid-column: 1; grid-row: 2; height: 280px; padding: 16px; border-top: 1px solid var(--rule); }
+  .dept-strip { grid-column: 1; grid-row: 3; grid-template-columns: repeat(2, 1fr); }
+  .hero-h1 { font-size: 38px; }
+  .hero-h1-sub { font-size: 22px; }
+
+  .about { grid-template-columns: 1fr; }
+  .about-left { padding: 40px 24px; border-right: none; border-bottom: 1px solid var(--rule); }
+  .about-right { padding: 32px 24px; }
+
+  .how { padding: 48px 24px; }
+  .steps { grid-template-columns: 1fr; }
+
+  .shows { padding: 48px 24px; }
+  .show-grid { grid-template-columns: 1fr; }
+
+  .venues { padding: 48px 24px; }
+  .venue-grid { grid-template-columns: 1fr; }
+
+  .join { grid-template-columns: 1fr; padding: 48px 24px; gap: 28px; }
+
+  .footer { grid-template-columns: 1fr; padding: 40px 24px 24px; gap: 32px; }
+  .footer-bottom { padding: 16px 24px; flex-direction: column; gap: 6px; }
+}
